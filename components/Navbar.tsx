@@ -6,11 +6,7 @@ const Navbar = () => {
       <h2 className="font-bold text-xl text-gray-900">Email Assistant</h2>
 
       <div className="flex flex-row rounded-full bg-gray-200 p-2 items-center justify-left pr-6">
-        <Image
-          src={"https://source.boringavatars.com/"}
-          height={30}
-          width={30}
-        />
+        <Image src={"/boringavatars.png"} height={30} width={30} />
 
         <h2 className="text-lg font-medium text-gray-900 ml-4">Japneet</h2>
       </div>
