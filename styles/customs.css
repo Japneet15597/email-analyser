@@ -1,0 +1,16 @@
+.parent {
+    background-color: rgb(20, 5, 1);
+    padding: 10;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5;
+    right: 4;
+}
+
+.parent[data-isOpen="true"] {
+    width: 400px;
+    height: 200px;
+}
