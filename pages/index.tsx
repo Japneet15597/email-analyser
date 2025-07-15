@@ -53,49 +53,49 @@ function Index() {
   };
 
   const checkConfidence = () => {
-    fetch("/api/checkConfidence", {
-      method: "POST",
-      body: JSON.stringify({
-        email,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setWordCount(countWords());
+    // fetch("/api/checkConfidence", {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     email,
+    //   }),
+    //   headers: {
+    //     "Content-type": "application/json; charset=UTF-8",
+    //   },
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setWordCount(countWords());
 
-        if (data.code) {
-          setLoading(false);
-          toast.error("Check Confidence API failed, Please try again");
-        } else {
-          setConfidenceScore(data.confidenceScore);
-          setLoading(false);
-        }
-      });
+    //     if (data.code) {
+    //       setLoading(false);
+    //       toast.error("Check Confidence API failed, Please try again");
+    //     } else {
+    //       setConfidenceScore(data.confidenceScore);
+    //       setLoading(false);
+    //     }
+    //   });
   };
 
   const suggestImprovements = () => {
-    fetch("/api/suggestImprovements", {
-      method: "POST",
-      body: JSON.stringify({
-        email,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.code) {
-          setSuggestionsLoading(false);
-          toast.error("Suggest Improvements API failed, Please try again");
-        } else {
-          setSuggestions(data);
-          setSuggestionsLoading(false);
-        }
-      });
+    // fetch("/api/suggestImprovements", {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     email,
+    //   }),
+    //   headers: {
+    //     "Content-type": "application/json; charset=UTF-8",
+    //   },
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data.code) {
+    //       setSuggestionsLoading(false);
+    //       toast.error("Suggest Improvements API failed, Please try again");
+    //     } else {
+    //       setSuggestions(data);
+    //       setSuggestionsLoading(false);
+    //     }
+    //   });
   };
 
   const handleAnalyzeClicked = () => {
